@@ -11,12 +11,12 @@
 </header>
 <p>What would you like to do?</p>
 <ul>
-    <li><a href = "insertSuperhero.php">Insert a Superhero</a></li>
+    <li><a href = "superheroform.html">Insert a Superhero</a></li>
     <li><a href = "displaySuperheros.php">Display all Superheros</a></li>
     <li><a href = "battle.php">Insert a Battle</a></li>
     <li><a href = "displayBattles.php">Display All Battles</a></li>
     <ul>
-        <?
+        <?php
         include ("connectUsers.php");
         $sql_query = "SELECT * FROM superheors";
         $result = $db->query($sql_query);

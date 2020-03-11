@@ -1,5 +1,5 @@
 <?php
-include ("connectUsers.php");
+include("connectUsers.php");
 
 if(empty($_POST["username"]) || empty($_POST["password"]))
 {

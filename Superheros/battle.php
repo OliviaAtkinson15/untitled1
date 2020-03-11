@@ -13,7 +13,7 @@
 <main>
     <form action="insertBattle.php" method="post">
         <p>Select the superhero that faught in this battle</p><select name="superhero">
-    <?
+    <?php
     include ("connectUsers.php");
     $sql_query = "SELECT * FROM superheors";
     $result = $db->query($sql_query);

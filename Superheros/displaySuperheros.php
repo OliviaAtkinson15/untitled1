@@ -11,7 +11,7 @@
     <p><a href="index.php">Return to home...</a></p>
 </header>
 <main>
-        <?
+        <?php
         include ("connectUsers.php");
         $sql_query = "SELECT * FROM superheors";
         $result = $db->query($sql_query);
