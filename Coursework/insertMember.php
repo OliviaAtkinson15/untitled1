@@ -9,14 +9,17 @@ else {
     if (isset($_POST['register'])) {
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $type = "SELECT adminType FROM members WHERE email='$email'";
+
         if (strpos($email, '@uk.ikm.com') !== false) {
             $select = "SELECT uid FROM members WHERE email='$email'";
             $result = mysqli_query($db, $select);
             if (mysqli_num_rows($result) == 0) {
             $sql =
-                    "INSERT INTO members (email, password)
-                    VALUES ('$email', '$password')";
+                    "INSERT INTO members (email, password, adminType)
+                    VALUES ('$email', '$password', 'generalUser')";
                 echo "Registered successfully";
+
             } else if (mysqli_num_rows($result) > 0){
                 echo "Email already registered";
             }

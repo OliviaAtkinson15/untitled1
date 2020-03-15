@@ -19,9 +19,6 @@ while($row = $result ->fetch_array()){
     $email = $row ['email'];
     $password = $row ['password'];
     $uid = $row ['uid'];
-
-    echo "<article>
-<p> {$email}{$password}{$uid}</p>";
 }
 
 ?>

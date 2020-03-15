@@ -1,3 +1,9 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IKM Intel</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <header>
@@ -9,5 +15,7 @@
         <input type="submit" name="register" value="Register">
         <input type="submit" name="login" value="Login">
     </form>
+    <a href="resetPassword.php">Forgotten Password?</a>
+
 </body>
 </html>
