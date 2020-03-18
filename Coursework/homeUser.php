@@ -5,15 +5,18 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-<h1>Welcome </h1>
+<img src="ikmlogo.jpeg" alt="IKM Logo">
 
 <?php
+header( "refresh:4;homeUser1.php" );
+
+include("connectUsers.php");
 session_start();
 $email = $_SESSION['email'];
-$type= $_SESSION['adminType'];
 
-print "<h2>" . $email . "</h2>";
-print "User role: User". "<br>";
+
+print "<h2> Welcome ". $email . "</h2>";
+print "<p> User role: General User</p>"."<br>";
 
 $sql_query = "SELECT * FROM members";
 $result = $db-> query($sql_query);

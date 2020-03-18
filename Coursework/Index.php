@@ -8,6 +8,7 @@
 <body>
 <header>
     <h1>IKM INTEL</h1>
+    <img src="ikmlogo.jpeg" alt="IKM Logo">
 
     <form action="insertMember.php" method="post">
         <input type="text" name="email" placeholder="Email"><br>
