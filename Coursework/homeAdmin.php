@@ -22,12 +22,11 @@ $sql_query = "SELECT * FROM members";
 $result = $db-> query($sql_query);
 
 
-while($row = $result ->fetch_array()){
+while($row = $result ->fetch_array()) {
     $email = $row ['email'];
     $password = $row ['password'];
     $uid = $row ['uid'];
 }
-
 ?>
 
 </body>

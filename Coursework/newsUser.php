@@ -38,11 +38,21 @@ while($row = $result ->fetch_array()) {
     $sqlQuery = "SELECT * FROM news WHERE id = $id";
     $rs = $db->query($sqlQuery);
     $result2=mysqli_fetch_array($rs);
-    echo '<img src="data:image/jpeg;base64,'.base64_encode( stripslashes($result2['image']) ).'"/>';
 
-}
+    // Get images from the database
+    $query = $db->query("SELECT img_2 FROM news WHERE id = '$id'");
 
-?>
+    if($query->num_rows > 0){
+        while($row = $query->fetch_assoc()){
+            $imageURL = 'uploads/'.$row["file_name"];
+            ?>
+            <img src="<?php echo $imageURL; ?>" alt="" />
+        <?php }
+    }else{ ?>
+        <p>No image(s) found...</p>
+    <?php } ?>
+<?php } ?>
+
 
 
 </body>
